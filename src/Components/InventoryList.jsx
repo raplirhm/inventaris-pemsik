@@ -8,9 +8,9 @@ const InventoryList = ({ inventory, searchTerm }) => {
 
   return (
     <div>
-      <h2 className='font-bold p-6 ml-4 '>Inventory List</h2>
+      <h2 className='font-bold p-6 ml-4 text-[#444444]'>Inventory List</h2>
       <table className="inventory-table">
-        <thead>
+        <thead className='text-[#444444]'>
           <tr>
             <th className='pl-10 p-2'>Nama</th>
             <th className='p-2 pl-4'>Kategori</th>
@@ -19,7 +19,7 @@ const InventoryList = ({ inventory, searchTerm }) => {
             <th className='p-2 pl-4 detail-table'>Detail</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='text-[#747474]'>
           {filteredInventory.map((item) => (
             <tr key={item.id}>
               <td className='pl-10 p-2'>{item.name}</td>

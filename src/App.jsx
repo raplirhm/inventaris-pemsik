@@ -43,8 +43,8 @@ function App() {
             Selamat datang di Inventaris
           </h2>
         </div>
-        <h2 className="ml-4 pl-6 font-semibold text-base">Stok Barang</h2>
-        <ul className="flex flex-col gap-3 ml-4 mr-10 pl-6 text-base">
+        <h2 className="ml-4 pl-6 font-semibold text-base text-[#444444]">Stok Barang</h2>
+        <ul className="flex flex-col gap-3 ml-4 mr-10 pl-6 text-base text-[#747474]">
           {inventory.map((item) => (
             <li key={item.id} className="">
               <div className="flex justify-between w-full">
