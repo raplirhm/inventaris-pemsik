@@ -11,7 +11,7 @@ const Sidebar = ({ toggleModal }) => {
       <li className="mb-1">
         <Link to="/inventory">Inventory List</Link>
       </li>
-      <li className="mb-1" onClick={toggleModal}>
+      <li className="mb-1 cursor-pointer" onClick={toggleModal}>
         Add Item
       </li>
     </ul>
