@@ -18,6 +18,8 @@ function App() {
     { id: 2, name: "Mouse", category: "Aksesoris", stock: 30, price: 200000 },
   ]);
 
+  
+
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (e) => {
@@ -36,6 +38,11 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const Dashboard = () => {
+    const filteredInventory = inventory.filter((item) =>
+      item.name.toLowerCase().includes(String(searchTerm).toLowerCase()) ||
+      item.category.toLowerCase().includes(String(searchTerm).toLowerCase())
+    );
+
     return (
       <div className="flex flex-col gap-5">
         <div className="bg-gradient-to-tl from-[#653bfb] to-[#20D3FC] h-[15vh] w-full text-white flex flex-col justify-center">
@@ -45,7 +52,7 @@ function App() {
         </div>
         <h2 className="ml-4 pl-6 font-semibold text-base text-[#444444]">Stok Barang</h2>
         <ul className="flex flex-col gap-3 ml-4 mr-10 pl-6 text-base text-[#747474]">
-          {inventory.map((item) => (
+          {filteredInventory.map((item) => (
             <li key={item.id} className="">
               <div className="flex justify-between w-full">
                 {item.name}{" "}
